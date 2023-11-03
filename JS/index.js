@@ -39,6 +39,7 @@ vistaArticulos()
 
 var carroArt = [];
 const agregar = (id) => {
+    document.querySelector("#vista-carro").classList.add("vista-carro-on")
     id = parseInt(id)
     let articulos = localStorage.getItem("articulos")
     articulos = JSON.parse(articulos)
@@ -127,7 +128,7 @@ const eliminarItem=(id)=>{
 
 }
 const vistaCarro=(carroArt)=>{
-
+    carroArt.length!==0? document.querySelector("#vista-carro").classList.add("vista-carro-on"):null
     document.querySelector("#vista-carro").innerHTML=""
     
    
@@ -135,12 +136,14 @@ const vistaCarro=(carroArt)=>{
         
         document.querySelector("#vista-carro").innerHTML+=`
             <div id="items">
-                <p>CANT: ${carItem.cant}</p>
-                <p>ART: ${carItem.descripcion}</p>
-                <p>PRECIO: $${carItem.precio}</p>
-                <p>SubTotal:${carItem.subTotal}</p>
-
-                <div><button id=${carItem.codigo} onclick="agregar(id)">+</button><button id=${carItem.codigo} onclick="restarItem(id)">-</button><button id=${carItem.codigo} onclick="eliminarItem(id)">DEL</button></div>
+                <div id="items-desc">
+                <span>CANT: ${carItem.cant}</span>
+                <span>ART: ${carItem.descripcion}</span>
+                <span>PRECIO: $${carItem.precio}</span>
+                <span>SubTotal:${carItem.subTotal}</span>
+                <div id="box-btn-carro"><button id=${carItem.codigo} onclick="agregar(id)">+</button><button id=${carItem.codigo} onclick="restarItem(id)">-</button><button id=${carItem.codigo} onclick="eliminarItem(id)">DEL</button></div>
+                </div>
+                
             </div>
         `
       
@@ -160,14 +163,16 @@ const totalVista=()=>{
        total=total+c.subTotal
        })
    return(total? document.querySelector("#vista-carro").innerHTML+=`
-    <p><b>Total: ${total}</b></p>
+    <div class="box-total"> <p><b>Total: ${total}</b></p>
     <div><a href="pagar.html" target="__blank">Pagar</a><button onclick="salir()">X</button><div>
+    </div>
     `:null
-   ,localStorage.setItem("total",total),total===0?(total=0,localStorage.setItem("total",JSON.stringify(total)),localStorage.removeItem("carroArt")):null)
+   ,localStorage.setItem("total",total),total===0?(document.querySelector("#vista-carro").classList.remove("vista-carro-on"),total=0,localStorage.setItem("total",JSON.stringify(total)),localStorage.removeItem("carroArt")):null)
 }
 
 
 const salir=()=>{
+    document.querySelector("#vista-carro").classList.remove("vista-carro-on")
     document.querySelector("#vista-carro").innerHTML="" 
 }
 

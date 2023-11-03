@@ -57,13 +57,60 @@ main{
     height: 50%;
 }
 #vista-carro{
-    width: 40%;
+    width: 60%;
     height: auto;
     border: 2px solid red;
     z-index: 4;
     position: absolute;
     margin: auto !important;
     background: white;
+    padding: 25px;
+    display: none;
+}
+.vista-carro-on{
+    display: flex !important;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
 }
 
+#items{
+    width: 100%;
+    height: auto;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#items>#items-desc>span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+#items>#items-desc{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: left;
+}
+#box-btn-carro{
+    margin-left: auto;
+    display: flex;
+    justify-content: start;
+    align-items:center;
+}
+#box-btn-carro>button{
+    margin:0px 10px;
+    
+}
 
+#box-total{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: left;
+    flex-direction: row;
+    padding: 5px;
+}
