@@ -24,9 +24,10 @@ const vistaArticulos = () => {
         document.querySelector("#root").innerHTML += `
         <div class="card-item">
             <img class="descripcion" src=${art.img}></img>
-            <p class="descripcion">${art.descripcion}</p>
-            <p class="descripcion">${art.precio}</p>
-            <button id=${art.codigo} class="btn-item" onclick="agregar(id)">Add</button>
+            <p class="descripcion subItem">${art.descripcion}</p>
+            <p class="descripcion subItem">ANTES: <strike>${art.precioAnt}</strike></p>
+            <p class="descripcion subItem">AHORA: ${art.precio}</p>
+            <button id=${art.codigo} class="btn-item" onclick="agregar(id)"><i class="fa-solid fa-cart-plus"></i></button>
         </div>
         `
 
@@ -62,7 +63,7 @@ const agregar = (id) => {
            localStorage.setItem("carroArt",JSON.stringify(carroArt))
            carroArt=localStorage.getItem("carroArt")
            carroArt=JSON.parse(carroArt)
-           return(console.log(carroArt),vistaCarro(carroArt),totalCarro())
+           return(console.log(carroArt),vistaCarro(carroArt),totalCarro(),window.location.href="#body")
     } else if(carr) {
       
        carr.cant++
@@ -78,7 +79,7 @@ const agregar = (id) => {
         localStorage.setItem("carroArt",JSON.stringify(carroArt))
         carroArt=localStorage.getItem("carroArt")
         carroArt=JSON.parse(carroArt)
-        return(console.log(carroArt),vistaCarro(carroArt),totalCarro())
+        return(console.log(carroArt),vistaCarro(carroArt),totalCarro(),window.location.href="#body")
     }
 
    
@@ -137,11 +138,11 @@ const vistaCarro=(carroArt)=>{
         document.querySelector("#vista-carro").innerHTML+=`
             <div id="items">
                 <div id="items-desc">
-                <span>CANT: ${carItem.cant}</span>
-                <span>ART: ${carItem.descripcion}</span>
-                <span>PRECIO: $${carItem.precio}</span>
-                <span>SubTotal:${carItem.subTotal}</span>
-                <div id="box-btn-carro"><button id=${carItem.codigo} onclick="agregar(id)">+</button><button id=${carItem.codigo} onclick="restarItem(id)">-</button><button id=${carItem.codigo} onclick="eliminarItem(id)">DEL</button></div>
+                <span><b> ${carItem.cant}</b></span>
+                <span> ${carItem.descripcion}</span>
+                <span>P/UNID: $${carItem.precio}</span>
+                
+                <div id="box-btn-carro"><span style="font-size:14px;font-weight:bold;margin-right:20px"> $${carItem.subTotal}</span><button class="agregar" id=${carItem.codigo} onclick="agregar(id)"><i class="fa-solid fa-cart-plus"></i></button><button class="restar" id=${carItem.codigo} onclick="restarItem(id)"><i class="fa-solid fa-cart-arrow-down"></i></i></button><button class="eliminar" id=${carItem.codigo} onclick="eliminarItem(id)"><i class="fa-solid fa-trash"></i></button></div>
                 </div>
                 
             </div>
@@ -163,8 +164,8 @@ const totalVista=()=>{
        total=total+c.subTotal
        })
    return(total? document.querySelector("#vista-carro").innerHTML+=`
-    <div class="box-total"> <p><b>Total: ${total}</b></p>
-    <div><a href="pagar.html" target="__blank">Pagar</a><button onclick="salir()">X</button><div>
+    <div class="box-total"> <p style="font-size:24px;width:100px;font-weight:bold"> $${total}</p>
+    <a class="link-pagar" href="pagar.html" target="__blank"><i class="fa-brands fa-cc-amazon-pay"></i></a><button class="btn-salir" onclick="salir()"><i class="fa-regular fa-circle-xmark"></i></button>
     </div>
     `:null
    ,localStorage.setItem("total",total),total===0?(document.querySelector("#vista-carro").classList.remove("vista-carro-on"),total=0,localStorage.setItem("total",JSON.stringify(total)),localStorage.removeItem("carroArt")):null)
@@ -173,7 +174,8 @@ const totalVista=()=>{
 
 const salir=()=>{
     document.querySelector("#vista-carro").classList.remove("vista-carro-on")
-    document.querySelector("#vista-carro").innerHTML="" 
+
+    
 }
 
 
@@ -181,7 +183,7 @@ const totalCarro=()=>{
     var total=localStorage.getItem("total")
     total=JSON.parse(total)
     document.querySelector("#total-carro").innerTex=""
-    document.querySelector("#total-carro").innerText=total
+    document.querySelector("#total-carro").innerText=` $${total}`
 }
 
 
