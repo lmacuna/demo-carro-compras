@@ -1,0 +1,100 @@
+{
+    "data":[
+        {
+            "codigo":1,
+            "img":"../IMAGES/TARAGUI-BCP-YERBA-MATE-1KG.png",
+            "descripcion":"Taragui yerba x 1kg",
+            "precioAnt":1600,
+            "precio":1450,
+            "stock":"860 unidades disponibles"
+        },
+        {
+            "codigo":2,
+            "img":"../IMAGES/cafe-cabrales.jpg",
+            "descripcion":"La Planta de Café x 500gr",
+            "precioAnt":930,
+            "precio":720,
+            "stock":"360 unidades disponibles"
+        },
+        {
+            "codigo":3,
+            "img":"../IMAGES/azucar-chango.png",
+            "descripcion":"Azucar chango x 1kg",
+            "precioAnt":1030,
+            "precio":810,
+            "stock":"2100 unidades disponibles"
+        },
+        {
+            "codigo":4,
+            "img":"../IMAGES/natura-2.jpg",
+            "descripcion":"Aceite Natura girasol x 1.5cc",
+            "precioAnt":1400,
+            "precio":1100,
+            "stock":"2080 unidades disponibles"
+        },
+        {
+            "codigo":5,
+            "img":"../IMAGES/molto-pure.jpg",
+            "descripcion":"Tomate Molto x 520cc",
+            "precioAnt":490,
+            "precio":380,
+            "stock":"1357 unidades disponibles"
+        },
+        {
+            "codigo":6,
+            "img":"../IMAGES/Tallarines-luchetti.jpg",
+            "descripcion":"Luchetti Tallarines x 500gr",
+            "precioAnt":410,
+            "precio":365,
+            "stock":"1590 unidades disponibles"
+        },
+        {
+            "codigo":7,
+            "img":"../IMAGES/blanca-flor.jpg",
+            "descripcion":"Harina Blanca Flor x 1kg",
+            "precioAnt":830,
+            "precio":690,
+            "stock":"1745 unidades disponibles"
+        },
+        {
+            "codigo":8,
+            "img":"../IMAGES/pollosoychu.jpg",
+            "descripcion":"Pollo x 1kg",
+            "precioAnt":850,
+            "precio":680,
+            "stock":"Preguntar en Sucursal"
+        },
+        {
+            "codigo":9,
+            "img":"../IMAGES/bola-de-lomo.jpg",
+            "descripcion":"Bola de Lomo x 1kg",
+            "precioAnt":2400,
+            "precio":2150,
+            "stock":"Preguntar en Sucursal"
+        },
+        {
+            "codigo":10,
+            "img":"../IMAGES/cebolla.jpg",
+            "descripcion":"Cebolla x 1kg",
+            "precioAnt":350,
+            "precio":220,
+            "stock":"Preguntar en Sucursal"
+        },
+        {
+            "codigo":11,
+            "img":"../IMAGES/tomate-fresco.jpg",
+            "descripcion":"Tomate x 1kg",
+            "precioAnt":790,
+            "precio":640,
+            "stock":"Preguntar en Sucursal"
+        },
+        {
+            "codigo":12,
+            "img":"../IMAGES/naranjas.jpg",
+            "descripcion":"Naranja x 1kg",
+            "precioAnt":340,
+            "precio":290,
+            "stock":"Preguntar en Sucursal"
+        }
+    ]
+}
