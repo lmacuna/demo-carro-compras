@@ -26,7 +26,8 @@ const vistaArticulos = () => {
             <img class="descripcion" src=${art.img}></img>
             <p class="descripcion subItem">${art.descripcion}</p>
             <p class="descripcion subItem">ANTES: <strike>${art.precioAnt}</strike></p>
-            <p class="descripcion subItem">AHORA: ${art.precio}</p>
+            <p class="descripcion subItem">AHORA: $${art.precio}</p>
+            <p class="descripcion subItem"> ${art.stock}</p>
             <button id=${art.codigo} class="btn-item" onclick="agregar(id)"><i class="fa-solid fa-cart-plus"></i></button>
         </div>
         `

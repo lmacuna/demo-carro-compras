@@ -87,7 +87,7 @@ margin-bottom: 10px;
     
 }
 .vista-carro-on{
-    width: 40% !important;
+    width: 34em !important;
     display: flex !important;
     justify-content: start;
     align-items: center;
@@ -97,7 +97,15 @@ margin-bottom: 10px;
     top: 100px !important;
     border: 3px solid rgb(20,20,20);
     transform: rotateX(360deg) !important;
-  
+    padding: 20px;
+    
+    @media (max-width:600px) {
+        width: 26em !important;
+    }
+    @media (max-width:400px) {
+        width: 98% !important;
+        
+    }
   
 }
 
@@ -116,6 +124,10 @@ margin-bottom: 10px;
     align-items: center;
     font-size: 12px;
     margin: 10px;
+    @media (max-width:400px) {
+        
+        font-size: 11px !important;
+    }
 }
 #items>#items-desc{
     width: 100%;
@@ -150,6 +162,10 @@ margin-bottom: 10px;
     background: transparent;
     cursor: pointer;
     font-size: 15px !important;
+    @media (max-width:400px) {
+        
+        font-size: 14px !important;
+    }
 }
 .restar{
     color:red !important;
@@ -174,6 +190,7 @@ margin-bottom: 10px;
     font-size: 40px;
     width: 50px;
     background: transparent;
+    cursor: pointer;
 }
 
 .cartIcon{

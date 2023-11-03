@@ -58,7 +58,7 @@
         },
         {
             "codigo":8,
-            "img":"../IMAGES/pollosoychu.jpg",
+            "img":"../IMAGES/Pollo-Congelado-x-1-Kg-_1.webp",
             "descripcion":"Pollo x 1kg",
             "precioAnt":850,
             "precio":680,
@@ -66,7 +66,7 @@
         },
         {
             "codigo":9,
-            "img":"../IMAGES/bola-de-lomo.jpg",
+            "img":"../IMAGES/bola-de-lomo-fetas.jpg",
             "descripcion":"Bola de Lomo x 1kg",
             "precioAnt":2400,
             "precio":2150,
@@ -74,7 +74,7 @@
         },
         {
             "codigo":10,
-            "img":"IMAGES/cebollas-cesta.avif",
+            "img":"../IMAGES/cebollas-cesta.avif",
             "descripcion":"Cebolla x 1kg",
             "precioAnt":350,
             "precio":220,
@@ -82,7 +82,7 @@
         },
         {
             "codigo":11,
-            "img":"IMAGES/tomates-canasta.avif",
+            "img":"../IMAGES/tomates-canasta.avif",
             "descripcion":"Tomate x 1kg",
             "precioAnt":790,
             "precio":640,
