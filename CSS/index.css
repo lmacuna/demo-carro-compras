@@ -81,7 +81,8 @@ margin-bottom: 10px;
     background: white;
     color: rgb(20,20,20);
     top: -100%;
-    transform: rotateX(-360deg);
+    transform:rotateX(-360deg);
+    width: 40%;
     
     
 }
@@ -91,7 +92,7 @@ margin-bottom: 10px;
     justify-content: start;
     align-items: center;
     flex-direction: column;
-  
+    border-radius: 0% !important;
     transition: all 1.5s;
     top: 100px !important;
     border: 3px solid rgb(20,20,20);

@@ -74,7 +74,7 @@
         },
         {
             "codigo":10,
-            "img":"../IMAGES/cebolla.jpg",
+            "img":"IMAGES/cebollas-cesta.avif",
             "descripcion":"Cebolla x 1kg",
             "precioAnt":350,
             "precio":220,
@@ -82,7 +82,7 @@
         },
         {
             "codigo":11,
-            "img":"../IMAGES/tomate-fresco.jpg",
+            "img":"IMAGES/tomates-canasta.avif",
             "descripcion":"Tomate x 1kg",
             "precioAnt":790,
             "precio":640,
