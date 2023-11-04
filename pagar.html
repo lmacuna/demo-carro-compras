@@ -20,6 +20,7 @@
     <main>
         <form>
             <h4>Pago con Tarjeta</h4>
+            <span id="total-form"></span>
             <input type="text" name="apellido" id="apellido" placeholder="Ingrese el Apellido"></input>
             <input type="text" name="nombre" id="nombre" placeholder="Ingrese el Nombre"></input>
             <input type="text" name="dni" id="dni" placeholder="Ingrese el DNI"></input>
@@ -27,8 +28,8 @@
             <input type="email" name="email" id="email" placeholder="Ingrese el E-mail"></input>
             <input type="text" name="telefono" id="telefono" placeholder="Ingrese el Telefono"></input>
             <div>
-                <input type="radio" name="tipo-tarjeta" value="credito">CRÉDITO</input>
-                <input type="radio" name="tipo-tarjeta" value="debito">DÉBITO</input>
+                <input type="radio" name="tipo-tarjeta" value="credito">CRÉDITO +10%</input>
+                <input type="radio" name="tipo-tarjeta" value="debito">DÉBITO -15%</input>
                 
             </div>
             <input type="text" name="tarjeta" id="tarjeta" placeholder="Tarjeta N°">
@@ -65,7 +66,7 @@
             </select>
             </div>
             <div id="total-factura"></div>
-              <input class="btn-form" type="submit" value="Confirmar">
+              <div><input class="btn-form" type="submit" value="Confirmar"><input class="btn-form" type="reset" value="Limpiar" onclick="totalCarro()"></div>
         </form>
 
         <div id="QR">
