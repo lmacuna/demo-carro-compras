@@ -28,6 +28,10 @@ tipodDescuento.forEach(input => {
             let descuento = (total * 15) / 100
             total = total - descuento
         }
+         else if (desc === "jubilados") {
+            let descuento = (total * 20) / 100
+            total = total - descuento
+        }
 
         return (document.querySelector("#total-factura").innerHTML = "", document.querySelector("#total-form").innerText = `Total: $${total}`,
             document.querySelector("#total-factura").innerHTML = `<label for="factura">Total</label><input style="width:80px;text-align:center;padding:3px;font-weight:bold" id="factura" name="factura" value=${total}></input>`)
