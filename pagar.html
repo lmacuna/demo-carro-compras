@@ -1,15 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Nunito">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/pagar.css">
 </head>
+
 <body>
     <header>
         <h1>Completa los datos para el pago</h1>
     </header>
+
+    <main>
+        <form>
+            <h4>Pago con Tarjeta</h4>
+            <input type="text" name="apellido" id="apellido" placeholder="Ingrese el Apellido"></input>
+            <input type="text" name="nombre" id="nombre" placeholder="Ingrese el Nombre"></input>
+            <input type="text" name="dni" id="dni" placeholder="Ingrese el DNI"></input>
+            <label for="nacimiento">Fecha de nacimiento</label><input style="width: 20%;" type="date" name="nacimiento" id="nacimiento"></input>
+            <input type="email" name="email" id="email" placeholder="Ingrese el E-mail"></input>
+            <input type="text" name="telefono" id="telefono" placeholder="Ingrese el Telefono"></input>
+            <div>
+                <input type="radio" name="tipo-tarjeta" value="credito">CRÉDITO</input>
+                <input type="radio" name="tipo-tarjeta" value="debito">DÉBITO</input>
+                
+            </div>
+            <input type="text" name="tarjeta" id="tarjeta" placeholder="Tarjeta N°">
+            <input type="text"  name="cvc" id="cvc" placeholder="CVC">
+            <div class="select-group">
+            <label>Expiration Date</label>
+            <select>
+                <option value="01">January</option>
+                <option value="02">February </option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            
+            <select>
+                <option value="23"> 2023</option>
+                <option value="24"> 2024</option>
+                <option value="25"> 2025</option>
+                <option value="26"> 2026</option>
+                <option value="27"> 2027</option>
+                <option value="28"> 2028</option>
+                <option value="29"> 2029</option>
+                <option value="30"> 2030</option>
+                <option value="31"> 2031</option>
+                <option value="32"> 2032</option>
+                <option value="33"> 2033</option>
+            </select>
+            </div>
+            <div id="total-factura"></div>
+              <input class="btn-form" type="submit" value="Confirmar">
+        </form>
+
+        <div id="QR">
+            QR
+        </div>
+        <div id="billetera">
+            Billetera Virtual
+        </div>
+        <div id="vacio">
+           
+        </div>
+    </main>
+
+    <script src="Services/services.js"></script>
+    <script src="JS/pagar.js"></script>
+    
 </body>
+
 </html>
