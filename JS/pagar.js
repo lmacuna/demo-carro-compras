@@ -3,7 +3,7 @@ const totalCarro = () => {
     total = JSON.parse(total)
     document.querySelector("#total-factura").innerHTML = ""
     document.querySelector("#total-form").innerText = `Total: $${total}`
-    document.querySelector("#total-factura").innerHTML = `<label for="factura">Total</label><input style="width:80px;text-align:center;padding:3px" id="factura" name="factura" value=${total}></input>`
+    document.querySelector("#total-factura").innerHTML = `<label for="factura">Total</label><input style="width:80px;text-align:center;padding:3px;font-weight:bold" id="factura" name="factura" value=${total}></input>`
 }
 totalCarro()
 
@@ -30,7 +30,7 @@ tipodDescuento.forEach(input => {
         }
 
         return (document.querySelector("#total-factura").innerHTML = "", document.querySelector("#total-form").innerText = `Total: $${total}`,
-            document.querySelector("#total-factura").innerHTML = `<label for="factura">Total</label><input style="width:80px;text-align:center;padding:3px" id="factura" name="factura" value=${total}></input>`)
+            document.querySelector("#total-factura").innerHTML = `<label for="factura">Total</label><input style="width:80px;text-align:center;padding:3px;font-weight:bold" id="factura" name="factura" value=${total}></input>`)
 
     })
 

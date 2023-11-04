@@ -113,3 +113,6 @@ form>input{
    width: auto !important;
     border-radius:4px;
 }
+#total-form{
+    font-weight: bold;
+}
