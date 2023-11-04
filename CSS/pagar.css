@@ -15,6 +15,8 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgb(240,240,240);
+    position: fixed;
 }
 
 main{
@@ -26,8 +28,9 @@ main{
     gap: 1em;
     max-width: 100%;
     min-height: 100%;
-    padding-top:50px;
+    padding-top:120px;
     padding-bottom: 50px;
+    
 }
 
 form{
