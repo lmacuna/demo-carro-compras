@@ -192,6 +192,15 @@ margin-bottom: 10px;
     background: transparent;
     cursor: pointer;
 }
+.borrar-carro{
+    margin: 20px;
+    border: none;
+    color: rgb(20,20,20);
+    font-size: 40px;
+    width: 50px;
+    background: transparent;
+    cursor: pointer;
+}
 
 .cartIcon{
     width: 100px;

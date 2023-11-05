@@ -130,7 +130,7 @@ const eliminarItem=(id)=>{
 
 }
 const vistaCarro=(carroArt)=>{
-    carroArt.length!==0? document.querySelector("#vista-carro").classList.add("vista-carro-on"):null
+    carroArt.length!==0&&localStorage.getItem("carroArt")!==null? document.querySelector("#vista-carro").classList.add("vista-carro-on"):null
     document.querySelector("#vista-carro").innerHTML=""
     
    
@@ -161,12 +161,12 @@ const totalVista=()=>{
     let cuentaCarro=localStorage.getItem("carroArt")
        cuentaCarro=JSON.parse(cuentaCarro)
        var total=0;
-       cuentaCarro.forEach(c=>{
+      localStorage.getItem("carroArt")!==null? cuentaCarro.forEach(c=>{
        total=total+c.subTotal
-       })
+       }):null
    return(total? document.querySelector("#vista-carro").innerHTML+=`
     <div class="box-total"> <p style="font-size:24px;width:100px;font-weight:bold"> $${total}</p>
-    <a class="link-pagar" href="pagar.html" target="__blank"><i class="fa-brands fa-cc-amazon-pay"></i></a><button class="btn-salir" onclick="salir()"><i class="fa-regular fa-circle-xmark"></i></button>
+    <a class="link-pagar" href="pagar.html" target="__blank"><i class="fa-brands fa-cc-amazon-pay"></i></a><button class="btn-salir" onclick="salir()"><i class="fa-regular fa-circle-xmark"></i></button><button class="borrar-carro" onclick="eliminarCarro()"><i class="fa-solid fa-circle-minus"></i></button>
     </div>
     `:null
    ,localStorage.setItem("total",total),total===0?(document.querySelector("#vista-carro").classList.remove("vista-carro-on"),total=0,localStorage.setItem("total",JSON.stringify(total)),localStorage.removeItem("carroArt")):null)
@@ -187,7 +187,18 @@ const totalCarro=()=>{
     document.querySelector("#total-carro").innerText=` $${total}`
 }
 
-
+const eliminarCarro=()=>{
+    carroArt=[];
+    document.querySelector("#vista-carro").innerHTML=""
+    document.querySelector("#total-carro").innerHTML=""
+    document.querySelector("#total-carro").innerHTML='<span id="total-carro">$0</span>'
+    localStorage.removeItem("carroArt")
+    localStorage.removeItem("total") 
+   
+        document.querySelector("#vista-carro").classList.remove("vista-carro-on")
+  
+   
+}
 
 
 
