@@ -20,17 +20,19 @@
     <main>
         <form>
             <h4>Pago con Tarjeta</h4>
-            <div id="total-form"></div>
+            
             <input type="text" name="apellido" id="apellido" placeholder="Ingrese el Apellido"></input>
             <input type="text" name="nombre" id="nombre" placeholder="Ingrese el Nombre"></input>
             <input type="text" name="dni" id="dni" placeholder="Ingrese el DNI"></input>
             <label for="nacimiento">Fecha de nacimiento</label><input style="width: 20%;" type="date" name="nacimiento" id="nacimiento"></input>
             <input type="email" name="email" id="email" placeholder="Ingrese el E-mail"></input>
             <input type="text" name="telefono" id="telefono" placeholder="Ingrese el Telefono"></input>
+            <div id="total-form"></div>
             <div>
-                <input type="radio" name="tipo-tarjeta" value="credito">CRÉDITO +10%</input>
-                <input type="radio" name="tipo-tarjeta" value="debito">DÉBITO -15%</input>
-                <input type="radio" name="tipo-tarjeta" value="jubilados">JUBILADOS -20%</input>
+                
+                <input class="radio" type="radio" name="tipo-tarjeta" value="credito"><span id="credito">CRÉDITO +10%</span></input>
+                <input class="radio" type="radio" name="tipo-tarjeta" value="debito"><span id="debito">DÉBITO -15%</span></input>
+                <input class="radio" type="radio" name="tipo-tarjeta" value="jubilados"><span id="jubilados">JUBILADOS -20%</span></input>
                 
             </div>
             <input type="text" name="tarjeta" id="tarjeta" placeholder="Tarjeta N°">
@@ -67,7 +69,7 @@
             </select>
             </div>
             <div id="total-factura"></div>
-              <div><input class="btn-form" type="submit" value="Confirmar"><input class="btn-form" type="reset" value="Limpiar" onclick="totalCarro()"></div>
+              <div><input class="btn-form" type="submit" value="Confirmar"><input class="btn-reset" type="reset" value="Limpiar" onclick="totalCarro()"></div>
         </form>
 
         <div id="QR">

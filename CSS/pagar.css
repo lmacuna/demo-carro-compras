@@ -54,8 +54,10 @@ form{
 form>input{
     width: 90%;
     padding: 7px;
+    border: 1px solid rgb(20,20,20);
     border-radius: 10px;
     margin-bottom: 5px;
+    
 }
 
 #QR,#billetera{
@@ -108,11 +110,39 @@ form>input{
 }
 
 .btn-form{
-    margin-top: 30px;
+    margin-top: 30px !important;
     padding: 10px 20px;
    width: auto !important;
     border-radius:4px;
+    background: rgb(50, 153, 103);
+    font-weight: bold;
+    color: white;
+    margin: 10px;
+}
+.btn-reset{
+    margin-top: 30px !important;
+    padding: 10px 20px;
+   width: auto !important;
+    border-radius:4px;
+    background: orange;
+    font-weight: bold;
+    margin: 10px;
 }
 #total-form{
     font-weight: bold;
 }
+
+.radio{
+    margin: 20px;
+}
+.radio-verde{
+    color: orangered !important;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 20px;
+    z-index: 4;
+}
+
+/* #debito,#credito,#jubilados{
+    margin: 10px;
+} */
